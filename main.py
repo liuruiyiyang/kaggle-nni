@@ -1,15 +1,9 @@
 import nni
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as plt
 from sklearn.utils import shuffle
-from sklearn.model_selection import GridSearchCV
-from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
-from sklearn import linear_model
 import logging
-import numpy as np
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
