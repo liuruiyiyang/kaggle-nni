@@ -1,4 +1,10 @@
 import nni
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+from sklearn.utils import shuffle
+from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
@@ -13,11 +19,43 @@ from sklearn.tree import DecisionTreeRegressor
 
 LOG = logging.getLogger('sklearn_regression')
 
+def seed_to_int(seed):
+    #Get just the digits from the seeding. Return as int
+    s_int = int(seed[1:3])
+    return s_int
 
 def load_data():
-    '''Load dataset, use boston dataset'''
-    boston = load_boston()
-    X_train, X_test, y_train, y_test = train_test_split(boston.data, boston.target, random_state=99, test_size=0.25)
+    '''Load dataset'''
+    data_dir = 'WDataFiles'
+    df_seeds = pd.read_csv(data_dir + '/WNCAATourneySeeds.csv')
+    df_tour = pd.read_csv(data_dir + '/WNCAATourneyCompactResults.csv')
+    df_seeds['seed_int'] = df_seeds.Seed.apply(seed_to_int)
+    df_seeds.drop(labels=['Seed'], inplace=True, axis=1)  # This is the string label
+
+    df_tour.drop(labels=['DayNum', 'WScore', 'LScore', 'WLoc', 'NumOT'], inplace=True, axis=1)
+
+    df_winseeds = df_seeds.rename(columns={'TeamID': 'WTeamID', 'seed_int': 'WSeed'})
+    df_lossseeds = df_seeds.rename(columns={'TeamID': 'LTeamID', 'seed_int': 'LSeed'})
+    df_dummy = pd.merge(left=df_tour, right=df_winseeds, how='left', on=['Season', 'WTeamID'])
+    df_concat = pd.merge(left=df_dummy, right=df_lossseeds, on=['Season', 'LTeamID'])
+    df_concat['SeedDiff'] = df_concat.WSeed - df_concat.LSeed
+    df_wins = pd.DataFrame()
+    df_wins['SeedDiff'] = df_concat['SeedDiff']
+    df_wins['Result'] = 1
+
+    df_losses = pd.DataFrame()
+    df_losses['SeedDiff'] = -df_concat['SeedDiff']
+    df_losses['Result'] = 0
+
+    df_predictions = pd.concat((df_wins, df_losses))
+    X_train = df_predictions.SeedDiff.values.reshape(-1, 1)
+    y_train = df_predictions.Result.values
+    X_train, y_train = shuffle(X_train, y_train)
+
+    # X_test = X_train
+    # y_test = y_train
+
+    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, random_state=99, test_size=0.25)
     # normalize data
     ss_X = StandardScaler()
     ss_y = StandardScaler()
