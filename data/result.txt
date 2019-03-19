@@ -1,0 +1,133 @@
+The cluster 1's ratio is 0.198535, most-frequent 5 words are: 
+government program information number years 
+The cluster 2's ratio is 0.251509, most-frequent 5 words are: 
+drive scsi file program bit 
+The cluster 3's ratio is 0.180922, most-frequent 5 words are: 
+team windows believe better point 
+The cluster 4's ratio is 0.169319, most-frequent 5 words are: 
+government information encryption windows data 
+The cluster 5's ratio is 0.199715, most-frequent 5 words are: 
+db space believe file point
+
+The cluster 1's ratio is 0.113290, most-frequent 5 words are: 
+file jesus believe israel law 
+The cluster 2's ratio is 0.117253, most-frequent 5 words are: 
+mail information program file number 
+The cluster 3's ratio is 0.089412, most-frequent 5 words are: 
+db believe space cs nasa 
+The cluster 4's ratio is 0.087410, most-frequent 5 words are: 
+government encryption chip information law 
+The cluster 5's ratio is 0.089982, most-frequent 5 words are: 
+team play games university game 
+The cluster 6's ratio is 0.106899, most-frequent 5 words are: 
+scsi windows bit mb drive 
+The cluster 7's ratio is 0.077370, most-frequent 5 words are: 
+file available output program windows 
+The cluster 8's ratio is 0.132601, most-frequent 5 words are: 
+game drive cs years world 
+The cluster 9's ratio is 0.102374, most-frequent 5 words are: 
+better believe gun life space 
+The cluster 10's ratio is 0.083409, most-frequent 5 words are: 
+space government believe point jesus
+
+The cluster 1's ratio is 0.069242, most-frequent 5 words are: 
+believe jesus evitdence jews number
+The cluster 2's ratio is 0.061944, most-frequent 5 words are: 
+card mb bit years point 
+The cluster 3's ratio is 0.068428, most-frequent 5 words are: 
+state stephanopoulos believe news years 
+The cluster 4's ratio is 0.039448, most-frequent 5 words are: 
+university cs send believe mail 
+The cluster 5's ratio is 0.049270, most-frequent 5 words are: 
+israel government israeli world sure 
+The cluster 6's ratio is 0.037115, most-frequent 5 words are: 
+information internet space privacy mail 
+The cluster 7's ratio is 0.057332, most-frequent 5 words are: 
+file available program windows server 
+The cluster 8's ratio is 0.047108, most-frequent 5 words are: 
+scsi os bit mb mac 
+The cluster 9's ratio is 0.060622, most-frequent 5 words are: 
+law jesus windows christian day 
+The cluster 10's ratio is 0.025525, most-frequent 5 words are: 
+graphics mail space pub ftp 
+The cluster 11's ratio is 0.055237, most-frequent 5 words are: 
+encryption government chip technology data 
+The cluster 12's ratio is 0.063275, most-frequent 5 words are: 
+team hockey season game space 
+The cluster 13's ratio is 0.067579, most-frequent 5 words are: 
+drive disk card hard controller 
+The cluster 14's ratio is 0.043950, most-frequent 5 words are: 
+gun guns win windows computer 
+The cluster 15's ratio is 0.054083, most-frequent 5 words are: 
+db drive went space says 
+The cluster 16's ratio is 0.009852, most-frequent 5 words are: 
+output file program oname printf 
+The cluster 17's ratio is 0.052478, most-frequent 5 words are: 
+file image jpeg program available 
+The cluster 18's ratio is 0.046904, most-frequent 5 words are: 
+president government won team years 
+The cluster 19's ratio is 0.053915, most-frequent 5 words are: 
+dos question car mail cs 
+The cluster 20's ratio is 0.036693, most-frequent 5 words are: 
+believe jesus stephanopoulos hell come
+
+The cluster 1's ratio is 0.046646, most-frequent 5 words are: 
+space launch pa el scsi 
+The cluster 2's ratio is 0.046322, most-frequent 5 words are: 
+space university day scsi mac 
+The cluster 3's ratio is 0.045235, most-frequent 5 words are: 
+computer bit years des phone 
+The cluster 4's ratio is 0.027702, most-frequent 5 words are: 
+db cs mov gm bh 
+The cluster 5's ratio is 0.045412, most-frequent 5 words are: 
+mb bit israel government mail 
+The cluster 6's ratio is 0.023478, most-frequent 5 words are: 
+armenian armenians war turkish government 
+The cluster 7's ratio is 0.028394, most-frequent 5 words are: 
+scsi chip armenia windows armenians 
+The cluster 8's ratio is 0.033472, most-frequent 5 words are: 
+data widget information application available 
+The cluster 9's ratio is 0.038342, most-frequent 5 words are: 
+internet pub computer privacy email 
+The cluster 10's ratio is 0.014613, most-frequent 5 words are: 
+judas point nhl number years 
+The cluster 11's ratio is 0.037618, most-frequent 5 words are: 
+drive jews turkish government car 
+The cluster 12's ratio is 0.033519, most-frequent 5 words are: 
+won lost mail information sure 
+The cluster 13's ratio is 0.041718, most-frequent 5 words are: 
+believe cs better help number 
+The cluster 14's ratio is 0.024927, most-frequent 5 words are: 
+pts scsi period power play 
+The cluster 15's ratio is 0.023288, most-frequent 5 words are: 
+drive disk scsi controller hard 
+The cluster 16's ratio is 0.010074, most-frequent 5 words are: 
+truth bible believe jesus absolute 
+The cluster 17's ratio is 0.031008, most-frequent 5 words are: 
+government israel space turkish sure 
+The cluster 18's ratio is 0.039309, most-frequent 5 words are: 
+encryption government hockey law technology 
+The cluster 19's ratio is 0.035661, most-frequent 5 words are: 
+team cs day players card 
+The cluster 20's ratio is 0.027448, most-frequent 5 words are: 
+output file program line oname 
+The cluster 21's ratio is 0.040864, most-frequent 5 words are: 
+dos windows card st bit 
+The cluster 22's ratio is 0.038402, most-frequent 5 words are: 
+graphics mail games game cs 
+The cluster 23's ratio is 0.031625, most-frequent 5 words are: 
+file government gun second bit 
+The cluster 24's ratio is 0.030214, most-frequent 5 words are: 
+stephanopoulos president water believe win 
+The cluster 25's ratio is 0.055410, most-frequent 5 words are: 
+image windows available file data 
+The cluster 26's ratio is 0.035168, most-frequent 5 words are: 
+jpeg image gif os version 
+The cluster 27's ratio is 0.034061, most-frequent 5 words are: 
+point space better wire believe 
+The cluster 28's ratio is 0.026953, most-frequent 5 words are: 
+argument send example day man 
+The cluster 29's ratio is 0.031720, most-frequent 5 words are: 
+gun believe better ra point 
+The cluster 30's ratio is 0.021396, most-frequent 5 words are: 
+space information available subject server 
