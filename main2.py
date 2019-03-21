@@ -18,6 +18,11 @@ import numpy as np
 
 LOG = logging.getLogger('sklearn_classification')
 
+def seed_to_int(seed):
+    #Get just the digits from the seeding. Return as int
+    s_int = int(seed[1:3])
+    return s_int
+
 def load_data():
     '''Load dataset, use 20newsgroups dataset'''
     data_dir = 'WDataFiles'
