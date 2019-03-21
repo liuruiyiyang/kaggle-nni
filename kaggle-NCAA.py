@@ -57,6 +57,11 @@ X_train = df_predictions.SeedDiff.values.reshape(-1,1)
 y_train = df_predictions.Result.values
 X_train, y_train = shuffle(X_train, y_train)
 
+print("X_train")
+print(X_train)
+print("y_train")
+print(y_train)
+
 # Train the model
 
 logreg = LogisticRegression()

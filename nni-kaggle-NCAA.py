@@ -10,6 +10,13 @@ from sklearn.model_selection import GridSearchCV
 # Input data files are available in the "../input/" directory.
 # For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
 from subprocess import check_output
+from sklearn.utils import shuffle
+from sklearn.model_selection import train_test_split
+import logging
+from sklearn.metrics import r2_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+import pandas as pd
 print(check_output(["ls", "WDataFiles/"]).decode("utf8"))
 # Any results you write to the current directory are saved as output.
 
@@ -56,17 +63,22 @@ print(df_predictions.head())
 X_train = df_predictions.SeedDiff.values.reshape(-1,1)
 y_train = df_predictions.Result.values
 X_train, y_train = shuffle(X_train, y_train)
+X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, random_state=99, test_size=0.25)
+ss_X = StandardScaler()
+X_train = ss_X.fit_transform(X_train)
+X_test = ss_X.transform(X_test)
+
 
 # Train the model
 
-logreg = LogisticRegression()
-params = {'C': np.logspace(start=-5, stop=3, num=9)}
-clf = GridSearchCV(logreg, params, scoring='neg_log_loss', refit=True)
-clf.fit(X_train, y_train)
-print('Best log_loss: {:.4}, with best C: {}'.format(clf.best_score_, clf.best_params_['C']))
+model = LinearRegression()
+
+model.fit(X_train, y_train)
 
 X = np.arange(-10, 10).reshape(-1, 1)
-preds = clf.predict_proba(X)[:,1]
+preds = model.predict(X)
+print("preds")
+print(preds)
 
 plt.plot(X, preds)
 plt.xlabel('Team1 seed - Team2 seed')
@@ -91,10 +103,10 @@ for ii, row in df_sample_sub.iterrows():
     X_test[ii, 0] = diff_seed
 
 # Create predictions using the logistic regression model we trained.
-preds = clf.predict_proba(X_test)[:,1]
+preds = model.predict(X_test)
 
 clipped_preds = np.clip(preds, 0.05, 0.95)
 df_sample_sub.Pred = clipped_preds
 print(df_sample_sub.head())
 
-df_sample_sub.to_csv('logreg_seed_starter.csv', index=False)
+df_sample_sub.to_csv('nni-logreg_seed_starter.csv', index=False)
