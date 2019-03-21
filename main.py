@@ -49,7 +49,8 @@ def load_data():
     # X_test = X_train
     # y_test = y_train
 
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, random_state=99, test_size=0.25)
+    # X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, random_state=99, test_size=0.25)
+    a, X_test, b, y_test = train_test_split(X_train, y_train, random_state=99, test_size=0.25)
     # normalize data
     ss_X = StandardScaler()
     ss_y = StandardScaler()
@@ -77,7 +78,6 @@ def get_model(PARAMS):
         'SVR': SVR(),
         'KNeighborsRegressor': KNeighborsRegressor(),
         'DecisionTreeRegressor': DecisionTreeRegressor(),
-        'LogisticRegressor' : LogisticRegression(),
     }
     if not model_dict.get(PARAMS['model_name']):
         LOG.exception('Not supported model!')
