@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 import logging
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.svm import SVR
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
@@ -76,7 +76,8 @@ def get_model(PARAMS):
         'LinearRegression': LinearRegression(),
         'SVR': SVR(),
         'KNeighborsRegressor': KNeighborsRegressor(),
-        'DecisionTreeRegressor': DecisionTreeRegressor()
+        'DecisionTreeRegressor': DecisionTreeRegressor(),
+        'LogisticRegressor' : LogisticRegression(),
     }
     if not model_dict.get(PARAMS['model_name']):
         LOG.exception('Not supported model!')
